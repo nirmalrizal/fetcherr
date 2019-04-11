@@ -5,6 +5,12 @@ const PORT = process.env.PORT || 5000;
 
 const { fetchPageHtml, validateUrl } = require('./fetchData');
 
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
+
 app.get('/fetch', async (req, res) => {
   try {
     const { url } = req.query;
