@@ -21,8 +21,9 @@ const fetchPageHtml = async fetchUrl => {
   page.on('request', request => {
     const tempUrl = request.url();
     const requestUrl = tempUrl.split('?')[0].split('#')[0];
+    const resourceType = request.resourceType();
     if (
-      blockedResourceTypes.indexOf(request.resourceType()) !== -1 ||
+      blockedResourceTypes.indexOf(resourceType) !== -1 ||
       skippedResources.some(resource => requestUrl.indexOf(resource) !== -1)
     ) {
       request.abort();
