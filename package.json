@@ -1,4 +1,12 @@
 {
+  "name": "fetcherr",
+  "engines": {
+    "node": "8.11.3"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "express": "^4.16.4",
     "puppeteer": "^1.14.0"
