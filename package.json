@@ -1,7 +1,7 @@
 {
   "name": "fetcherr",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "puppeteer": "^1.18.1"
   },
   "devDependencies": {
